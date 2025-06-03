@@ -124,3 +124,34 @@ function signIn(nomeutente, passwar){
 }
 
 signIn('Dustl', 'wincwicn88A');
+
+let giocoSCF = {
+
+  gioca: function (mossagiocatore){
+
+    let mossacomputer = ''
+    let numbercasual = Math.floor(Math.random()*(4-1)+1)
+    if (numbercasual === 1){
+      mossacomputer = 'sasso'
+    }else if (numbercasual === 2){
+      mossacomputer = 'forbici'
+    }else{
+      mossacomputer = 'carta'
+    }
+
+    if (mossagiocatore === 'sasso' && mossacomputer === 'sasso'){
+      console.log('Pareggio')
+      return;
+    }else if(mossagiocatore === 'sasso' && mossacomputer === 'forbici'){
+      console.log('hai vinto')
+      return;
+    }else if(mossagiocatore === 'sasso' && mossacomputer === 'carta'){
+      console.log('hai perso')
+      return;
+    }
+  }
+
+ 
+}
+
+giocoSCF.gioca('sasso');
