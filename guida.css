@@ -1,0 +1,46 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.hero{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.counter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  
+}
+
+#numerino{
+  color: red;
+}
+
+#numerone{
+font-size: 3rem;
+}
+
+.bottoni{
+  display: flex;
+  gap: 3rem;
+}
+
+#sx,#dx,#azzera{
+  border: 0px solid;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+}
