@@ -112,3 +112,15 @@ function registrazione (nome, nutente, passwor, mailo){
 registrazione('Luke', 'Dustl', 'wincwicn88A', 'dustin@dustin');
 console.log(registro)
 
+function signIn(nomeutente, passwar){
+
+  for (i=0; i<registro.length;i++){
+    if (nomeutente === registro[i].username && passwar === registro[i].pass ){
+      console.log('Sei dentro!') 
+      return;
+    }
+  }
+  console.log('utente o password sbagliati')
+}
+
+signIn('Dustl', 'wincwicn88A');
