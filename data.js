@@ -155,3 +155,43 @@ let giocoSCF = {
 }
 
 giocoSCF.gioca('sasso');
+
+let fatturazione = {
+
+  fattura: [
+  
+    {
+    nome: 'Luca',
+    fatture: [[100, 'sport'], [300, 'sport'], [200, 'atttività']]
+  },
+
+  {
+    nome: 'Paolo',
+    fatture: [[400, 'sport'], [500, 'sport'], [50, 'atttività']]
+  },
+
+  {
+    nome: 'Marielene',
+    fatture: [[20, 'sport'], [100, 'sport'], [150, 'atttività']]
+  },
+
+  {
+    nome: 'Fabio',
+    fatture: [[10, 'sport'], [30, 'sport'], [20, 'atttività']]
+  }],
+
+  aggiungiFatture: function(nomecliente, fatt){
+
+    let okk = fatturazione.fattura
+    for (i=0; i<okk.length;i++){
+      if (nomecliente === okk[i].nome){
+        okk[i].fatture.push(fatt)
+      }
+    }
+  }
+}
+
+fatturazione.aggiungiFatture('Fabio', [400, 'sport'])
+console.log(fatturazione)
+
+
