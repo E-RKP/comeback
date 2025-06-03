@@ -195,3 +195,68 @@ fatturazione.aggiungiFatture('Fabio', [400, 'sport'])
 console.log(fatturazione)
 
 
+let contoBancario = {
+
+  clienti: [
+    {
+    nome: 'Nei',
+    saldo: 100,
+    movimenti: []
+  },
+
+   {
+    nome: 'Mark',
+    saldo: 10000,
+    movimenti: []
+  },
+
+   {
+    nome: 'Zest',
+    saldo: 200,
+    movimenti: []
+  },
+
+   {
+    nome: 'Paul',
+    saldo: 10,
+    movimenti: []
+  },
+],
+
+versa: function(name, importo){
+
+  if (importo <0){
+    console.log('inserire cifra valida')
+    return; 
+  }
+  for (i=0; i<this.clienti.length;i++){
+    if (this.clienti[i].nome === name){
+      this.clienti[i].saldo = this.clienti[i].saldo+importo
+      this.clienti[i].movimenti.push('+'+importo)  
+    }
+  }
+},
+
+preleva: function(name, importo){
+  for (i=0; i<this.clienti.length;i++){
+    if (this.clienti[i].nome === name && ((this.clienti[i].saldo)-(importo)>=0)){
+      this.clienti[i].saldo = this.clienti[i].saldo-importo
+      this.clienti[i].movimenti.push('-'+importo)
+    }
+  }
+},
+
+storico: function(name){
+  for (i=0; i<this.clienti.length;i++){
+    if (this.clienti[i].nome === name){
+      console.log(this.clienti[i].movimenti.join(', '))
+    }
+  }
+}
+}
+
+contoBancario.versa('Paul', 100)
+contoBancario.preleva('Paul', 100)
+contoBancario.storico('Paul')
+console.log(contoBancario.clienti)
+
