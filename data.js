@@ -48,3 +48,67 @@ azzera.onclick = function azzerare(){
   numerino.innerHTML = counterm;
   numerone.innerHTML = counterbig
 }
+
+
+let registro = [
+
+  {
+    name: 'Paolo',
+    username: 'Skril',
+    mail: 'paolo@paolo.com',
+    tempo: 2,
+    pass: 'veevneiKCI1',
+    isLogged: false
+  },
+
+   {
+    name: 'Luca',
+    username: 'Eskghere',
+    mail: 'dancing@hoy.com',
+    tempo: 1,
+    pass: 'vdenie',
+    isLogged: true
+  },
+
+   {
+    name: 'Mariella',
+    username: 'marixx',
+    mail: 'maropos@kk.com',
+    tempo: 5,
+    pass: 'vnevonovehs88',
+    isLogged: false
+  },
+
+
+   {
+    name: 'Ernesto',
+    username: 'sabaody',
+    mail: 'ern@roti.com',
+    tempo: 1,
+    pass: 'snjso77',
+    isLogged: true
+  }
+]
+function registrazione (nome, nutente, passwor, mailo){
+
+  let newutente = {
+    name: nome,
+    username: nutente,
+    mail: mailo,
+    tempo: 0,
+    pass: passwor,
+    isLogged: true
+  }
+  
+  for (i=0; i<registro.length;i++){
+    if (registro[i].username === newutente.username){
+      return 'utente già registrato'
+    }
+  }
+
+  registro.push(newutente)
+}
+
+registrazione('Luke', 'Dustl', 'wincwicn88A', 'dustin@dustin');
+console.log(registro)
+
